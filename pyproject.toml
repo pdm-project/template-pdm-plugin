@@ -1,0 +1,39 @@
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[project]
+name = "pdm-plugin"
+description = "A PDM plugin project"
+authors = []
+dependencies = []
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["pdm", "pdm-plugin"]
+dynamic = ["version"]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.entry-points."pdm"]
+pdm_plugin = "pdm_plugin:plugin"
+
+[tool.pdm]
+plugins = [
+    "-e file:///${PROJECT_ROOT}/#egg=pdm_plugin",
+]
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.scripts]
+test = "pytest tests"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=7",
+    "pdm>=2.5"
+]
