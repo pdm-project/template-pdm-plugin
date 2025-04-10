@@ -4,13 +4,15 @@
 
 ## Installation
 
-Enable the plugin:
+You can either install the plugin globally or in your project.
+
+Enable the plugin globally:
 
 ```
 pdm self add pdm-plugin
 ```
 
-Enable the plugin in your project:
+Or, enable the plugin in your project:
 
 ```toml
 [tool.pdm]

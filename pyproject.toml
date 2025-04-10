@@ -32,7 +32,7 @@ source = "scm"
 [tool.pdm.scripts]
 test = "pytest tests"
 
-[tool.pdm.dev-dependencies]
+[dependency-groups]
 dev = [
     "pytest>=7",
     "pdm[pytest]>=2.5"
