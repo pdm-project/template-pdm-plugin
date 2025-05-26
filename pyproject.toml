@@ -7,7 +7,7 @@ name = "pdm-plugin"
 description = "A PDM plugin project"
 authors = []
 dependencies = []
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 readme = "README.md"
 license = {text = "MIT"}
 keywords = ["pdm", "pdm-plugin"]
